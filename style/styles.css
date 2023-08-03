@@ -1,0 +1,13 @@
+body {
+    background-color: #f8f9fa; /* Цвет фона страницы */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #ffffff; /* Цвет контейнера */
+    padding: 20px; /* Отступы внутри контейнера */
+    border-radius: 10px; /* Закругление углов контейнера */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень контейнера */
+}
