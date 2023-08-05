@@ -3,14 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style/styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/flatly/bootstrap.min.css" integrity="sha384-qF/QmIAj5ZaYFAeQcrQ6bfVMAh4zZlrGwTPY7T/M+iTTLJqJBJjwwnsE5Y0mV7QK" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100;1,400&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <h1>Добро пожаловать на сайт отдела маркетинга</h1>
-    </div>
-    <div class="container">
-        <h2>Информация о нас</h2>
-    </div>
+<body style="background-image: url('images/background.jpg');">
+
+<!-- Панель навигации -->
+    <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+        <div class="container-fluid">
+          <!-- <a class="navbar-brand" href="#">Маректинг</a> -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" 
+          aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#home">Домашняя страница
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#info">Информация о нас</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#reviews">Отзывы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+<!-- Раздел с приветствием -->
+    <section id="home">
+        <h2 class="nav-item">Добро пожаловать на сайт отдела маркетинга</h2>
+    </section>
+
+<!-- Текст к добро пожаловать -->
+      <section id="home-text">
+        <figure>
+            <blockquote class="blockquote">
+              <p class="mb-0">Это страница с текстом.</p>
+            
+            </blockquote>
+            <figcaption class="blockquote-footer">
+              Искандар Курбонов <cite title="Source Title"></cite>
+            </figcaption>
+        </figure>
+      </section>
+
+<!-- Раздел информации о нас -->
+    <section id="info">
+        <h3 class="nav-item">Информация о нас</h3>
+    </section>
+
+<!-- Раздел с отзывами -->
+    <section id="reviews">
+        <h3 class="nav-item">Отзывы</h3>
+    </section>
+
+<!-- Раздел с контактами -->
+    <section id="contacts">
+        <h3 class="nav-item">Контакты</h3>
+    </section>
+
+<!-- Скрипт для стрелки вниз -->
+    <script>
+        function scrollToInfo() {
+            document.getElementById('info').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    <button onclick="scrollToInfo()" class="arrow-button">&#8595;</button>
 </body>
+
+<!-- Форма для обратной связи -->
+<div class="forms-container">
+    <h3 id="forms" class="nav-item">Форма обратной связи</h3>
+    <form class="forms-container">
+        <fieldset>
+          <div class="form-group row">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1" class="form-label mt-4">Введите адрес электронной почты</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+            <small id="emailHelp" class="form-text text-muted">Мы никогда не передадим ваш электронный адрес кому-либо еще.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleTextarea" class="form-label mt-4">Ваше обращение</label>
+            <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Опишите Ваше обращение и мы ответим в скором времени"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPhone" class="form-label mt-4">Введите номер телефона</label>
+            <input type="tel" class="form-control" id="exampleInputPhone" placeholder="Номер телефона">
+          </div>
+          <fieldset class="form-group">
+            <legend class="mt-4">Предпочтительный способ связи</legend>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+              <label class="form-check-label" for="optionsRadios1">
+                Через электронную почту
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              <label class="form-check-label" for="optionsRadios2">
+                Через телефон
+              </label>
+            </div>
+          <button type="submit" class="btn btn-primary">Подтвердить</button>
+        </fieldset>
+      </form>
+</div>
+
 </html>
